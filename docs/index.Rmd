@@ -5,34 +5,15 @@ date: '2022-11-20'
 output: html_document
 ---
 
-```{r echo=FALSE, eval=TRUE, message=FALSE}
+```{r echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
 source("../source/a4-helpers.R")
 source("../source/analysis.R")
+
 ```
 
 ## Abstract
 
 The main question is, what are the inequalities in the jail population? Since the increase in the jail population, I am concerned that there are a higher number of people in certain groups getting thrown into jail. To address this concern, I planned to create graphs and maps to see the comparison of 5 different race groups' jail populations in the United States of America.
-
-# Test (TODO: Remove before submission!!)
-
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
-
--   Here's a test of a dynamic variable. Say **"`r q1_string`!!!**
--   Here's another test. A vector of numbers: `r test_query2(num)`.
-
-Recall that *{r echo=TRUE}* can be used to display the code, which is very useful when developing and debugging a report. Here's an example:
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
 
 ## Introduction
 
@@ -42,6 +23,33 @@ The government in the United States of America holds a strong power over everybo
 
 In the data, I created a function in Rstudio to find the highest number of incarceration for each group. Most of the highest jail population in their group was in California, except for the Native group in Arizona. Additionally, the Black, Latinx, and White groups had the highest incarceration in 1993, while the AAPI (Asian American Pacific Islander) and Native groups had the highest in 1999 and 2007. For the AAPI group, their highest number was about 893, for the Back group, it was about 13143, for the Latinx group, it was about 16594, for the Native group, it was about 425, and lastly, for the White group, it was about 7036. From this data, we can see how the Black and Latinx groups were incarcerated the most in 1993, and there may be inequality, and racism played in the arrest by police by the numbers.
 
-[TODO ... other sections ... See Canvas for details]
+## Growth of the U.S. Prison Population
 
-*All the very best with your work!*
+```{r, echo=FALSE}
+print(plot_jail_pop_for_us())
+```
+We can see from the chart that over the years the jail population increased, and we don't know the reason behind these incarcerations. There can be assumptions that many people were committing crimes, but a question we should ask with this data is, was the police showing racism while finding the people to arrest? We can break down the data from this chart to separate each culture group and answer our question.
+
+## Bar Charts 
+
+Below are charts of 5 different race groups in the order of the AAPI group (Asian American Pacific Islander), Black group, Latinx group, Native group, and White group. These charts show the number of incarcerated people each year found from the data.
+```{r, echo=FALSE}
+print(plot_aapi_pop_in_jail())
+print(plot_black_pop_in_jail())
+print(plot_latinx_pop_in_jail())
+print(plot_native_pop_in_jail())
+print(plot_white_pop_in_jail())
+```
+The question asked with these charts is which groups had the most number of people incarcerated? As we can compare each chart, it looks like the White group had the most people incarcerated over the years. it even surpassed the Black group. This is shocking because I thought the Black and Latino groups would have the highest number of incarceration, so I feel it also shows how racism has improved over the past couple of years, so I feel it also shows how racism has improved over the past couple of years.
+
+## Maps
+
+Below are maps of 5 different race groups in the order of the AAPI group (Asian American Pacific Islander), Black group, Latinx group, Native group, and White group. The maps show the number of people incarcerated in each county in the U.S. The number of people in the legends may vary, so pay attention to the legend to see the number of people incarcerated with the color. 
+```{r, echo=FALSE}
+print(jail_map_aapi)
+print(jail_map_black)
+print(jail_map_latinx)
+print(jail_map_native)
+print(jail_map_white)
+```
+I wanted to ask, were White people less incarcerated throughout the U.S? From the maps, it looks like it was almost the same as the other groups, except for the AAPI and Native groups, which had less than 500 people. Additionally, most incarceration was towards a bit of the left side of the map where it could be a mixed group of people were living there, and each group had almost the same amount of people incarcerated. So the White group did not have less incarceration in America and was a bit the same compared to the other groups when they had about 2000 to 4000 people in jail that were mixed around counties. I would have thought there would be more Black people incarcerated in different counties and fewer White people in jail, but it seems like it was not too much of a difference compared to the AAPI and Native groups. 

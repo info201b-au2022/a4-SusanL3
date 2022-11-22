@@ -104,11 +104,11 @@ get_jail_pop_by_states <- function(states) {
 }
 
 plot_jail_pop_by_states <- function(states) {
-  state_graph <- ggplot(data = get_jail_pop_by_states(), aes(x = year, y = state)) +
+  state_graph <- ggplot(data = get_jail_pop_by_states(), aes(x = state, y = year)) +
     geom_bar(stat = "identity") +
     xlab("Year") +
     ylab("States") +
-    ggtitle("Prison Population from 1970 to 2018 in States")
+    ggtitle("Prison Population from 1970 to 2018 in States") +
   return(state_graph)
 }
 
