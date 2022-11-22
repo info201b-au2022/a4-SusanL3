@@ -1,7 +1,7 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
+title: "Jail Population Comparison Between 5 Different Races"
+author: "Susan Lai"
+date: '2022-11-20'
 output: html_document
 ---
 
@@ -10,22 +10,23 @@ source("../source/a4-helpers.R")
 source("../source/analysis.R")
 ```
 
-## Abstract 
-[TODO: Include a short abstract (about 50 words)]
+## Abstract
+
+The main question is, what are the inequalities in the jail population? Since the increase in the jail population, I am concerned that there are a higher number of people in certain groups getting thrown into jail. To address this concern, I planned to create graphs and maps to see the comparison of 5 different race groups' jail populations in the United States of America.
 
 # Test (TODO: Remove before submission!!)
+
 ```{r echo=FALSE}
 q1_string <- test_query1()
 num <- 5
 ```
+
 As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
 
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
+-   Here's a test of a dynamic variable. Say **"`r q1_string`!!!**
+-   Here's another test. A vector of numbers: `r test_query2(num)`.
 
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
+Recall that *{r echo=TRUE}* can be used to display the code, which is very useful when developing and debugging a report. Here's an example:
 
 ```{r echo=TRUE}
 num <- 5
@@ -33,13 +34,14 @@ sum <- sum(test_query2(num))
 print(sum)
 ```
 
-## Introduction 
-[TODO]
+## Introduction
 
-## Data Summary 
-[TODO]
+The government in the United States of America holds a strong power over everybody by mostly having control over the country. They can create laws and rules about what people can do in their lives, and one of them is the police. Over the past few decades, the jail population has increased, and we don't know exactly why that is happening. It may be many crimes committed by the people incarcerated or the inequality towards people of color. We can find the reason behind this by using data and analyzing the patterns within them. Additionally, there are direct and indirect stakeholders are impacted by this research. The direct stakeholders are the police who are involved daily in finding people committing crimes, and people are the indirect stakeholders that read the events about the police. As you scroll down, you will see graphs and maps showing the population of 5 different race groups to analyze if inequality was in the system throughout America, and when we see the patterns in the data, we will try and stop the power they hold to attack people of color.
+
+## Data Summary
+
+In the data, I created a function in Rstudio to find the highest number of incarceration for each group. Most of the highest jail population in their group was in California, except for the Native group in Arizona. Additionally, the Black, Latinx, and White groups had the highest incarceration in 1993, while the AAPI (Asian American Pacific Islander) and Native groups had the highest in 1999 and 2007. For the AAPI group, their highest number was about 893, for the Back group, it was about 13143, for the Latinx group, it was about 16594, for the Native group, it was about 425, and lastly, for the White group, it was about 7036. From this data, we can see how the Black and Latinx groups were incarcerated the most in 1993, and there may be inequality, and racism played in the arrest by police by the numbers.
 
 [TODO ... other sections ... See Canvas for details]
 
-_All the very best with your work!_
-
+*All the very best with your work!*
